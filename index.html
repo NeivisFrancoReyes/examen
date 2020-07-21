@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+    <script src="./javaScript/validacion.js"></script>
+    <link rel="stylesheet" href="./css/ingreso.css">
+</head>
+<body>
+    <div class="contenedor">
+    <header class="header">
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+               <a href="inicio.html" class="titulo"><p><b>Examen</b></p></a>
+                <div class="enlace" id="enlace">
+    
+                    <a href="index.html">Registro estudiante</a>
+                    <a href="alumna.html"  >Acerca del aministrador</a>
+                    <a href="problematica.html" >Informacion del problema</a>
+                    <a href="tablas.html" >Solucion del problema</a>
+                </div> 
+            
+            </div>
+        </nav>
+    </header>
+    <main class="contenido">
+        <form action="inicio.html">
+            <div class="contenedor-form"> 
+                <h2 class="form--titulo">Registro estudiante</h2>
+                    <form action="index.html" method="get" name="registros" id="registros">
+        
+                        <table>
+
+                            <tr>
+                                <td> <label for="txtnombre">Escriba su nombre:</label></td>
+                                <td><input type="text"  class="formulario" name="nombre" placeholder="Nombre del estudiante" id="nombre" required ></td>
+                                    <div  class="mensaje" id="mensajeNombre"></div>
+                            </tr>
+
+                             <tr>
+                                <td><label for="txtcedula">Ingrese la cédula</label></td>
+                                <td><input type="text"  class="formulario" id="txtcedula">
+                                    <div  class="mensaje"id="mensajeCedula"></div></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="txtCiudad"> Ciudad a la que pertenece
+                                        <select name="ciudades" id="">
+                                            <option value="1">Manta</option>
+                                            <option value="2">Chone</option>
+                                            <option value="3">Portoviejo</option>
+                                            <option value="4">Bahia de Caraquez</option>
+                                            <option value="5">Carmen</option>
+                                            <option value="6">Flavio Alfaro</option>
+                                            <option value="7">Calceta</option>
+                                            <option value="8"> Montecristi</option>
+                                            <option value="9">Pedernales</option>
+                                            <option value="10">Jipijapa</option>
+                                        </select>
+                                </td>
+                            </tr>
+
+                            <tr >
+                                <td><label for="txtfelefono">Escriba su numero de telefono:</label></td>
+                                <td><input type="text" name="telefono" id="telefono" placeholder="telefono" class="input-48">
+                                    <div  class="mensaje" id="mensajetelefono"></div></td>
+                            </tr>
+
+                            <tr >
+                                <td><label for="nFilas">Escriba el numero de filas</label></td>
+                                <td><input class="formulario" type="number" id="nFilas" placeholder="Ingrese número de filas" required>
+                                    <div class="mensaje" id="mensajeFilas"></div></td>
+                            </tr>
+
+                            <tr >
+                                <td><label for="nColumnas">Escriba el numero de Comlumnas</label></td>
+                                <td><input class="formulario" type="number" id="nColumnas" placeholder="Ingrese número de Columnas" required>
+                                    <div  class="mensaje"id="mensajeColumnas"></div></td>
+                            </tr>
+
+                            <tr >
+                                <td><button  class="button" id="btnRegistrarse">Registrarse</button></td>
+                            </tr>
+
+
+
+                        </table>
+                    </form>
+            </div>
+        </form>
+
+       
+
+</main>
+
+<footer class="footer">
+    <nav>
+        <p>Franco Reyes Neivis,Manta-Ecuador © Copyright  2020 </p>
+    </nav>
+</footer>  
+
+</body>
+</html>

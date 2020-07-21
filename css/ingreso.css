@@ -1,0 +1,246 @@
+:root{
+    --color1: rgb(219,144,.5);
+    --color2: rgba(23, 180, 83, 0.877);
+    --color3: rgba(11,194,211, 0.623);
+    --fondo: #f2f2f2;
+    --titulos: 3.75rem;
+    --margenes: 1.875rem;
+    --espacios: 0.625rem;
+    --espacios-contenido:2.8125rem;
+  }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url(../imagenes/portada.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Roboto;
+}
+
+
+.contenedor {
+	width: 90%;
+	max-width: 75em;
+	margin: 1.25em auto;
+	display: grid;
+	grid-gap: 1.25em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		'header			header    header'
+		'destacado		destacado  destacado'
+		'contenido		contenido  contenido'
+		'footer	 		footer 	 footer';
+}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	padding: 1.875em;
+    background: cadetblue;
+    background-size: cover;  
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;  
+	box-shadow: 0px 0px 40px rgba(102, 102, 102, 0.2);
+}
+
+
+.contenedor-nav .titulo {
+    text-decoration: none; 
+    color: black;
+}
+.titulo p{
+    font-size: 2.875em;
+    text-align: center;
+}
+
+
+.enlace {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	display: flex;
+	justify-content: space-between;
+}
+
+.enlace a {
+	padding: 0.625em;
+	color: #000;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 200;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 1em;
+}
+
+.enlace a:hover {
+	background: #000;
+	color: #fff;
+}
+/*****************************************************/
+
+
+/*---------- CONTENIDO ----------*/
+.contenido {
+    grid-area: contenido;
+
+    
+	
+
+}
+.contenido label{
+	font-size: 20px;
+	color:white;
+    display: inline;    
+}
+
+.contenido button {
+    background: #ff851b;
+    color: #fff;
+    border: none;
+    width: 200px;
+    padding: 10px 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+    transition: all .5s ease;
+    margin-top: 5px;
+}
+.mensaje{
+    color: red;
+    display: block;
+    background: white;
+}
+
+.contenido button:hover
+{
+    background: rgba(0, 117, 118, 0.7);
+    
+}
+
+.contenedor-form{
+    position: relative;
+    padding: 20px;
+    margin: auto;
+    background: rgba(0, 0, 0, .6);
+    width: 600px;
+    max-width: 500px;
+    margin: 45px auto;
+    color: #fff;
+    border-radius: 4px;
+
+}
+.form--titulo
+{
+    background: rgba(11,194,211, 0.623);
+    text-align: center;
+    color: white;
+    padding: 0.9375rem;
+    font-weight: 100;
+    font-size: 1.875rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: var(--espacios-contenido);
+}
+
+.contenedor-form h2{
+    margin: 0 0 28px 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2;
+
+}
+.contenedor-form input[type="text"],
+.contenedor-form input[type="number"]{
+    outline: none;
+    background: white;
+    display: 10px 15px;
+    width: 100%;
+    padding: 10px 20px;
+    color:black;
+    border: none;
+    border-radius: 2px;
+    border-bottom: 4px solid #ff851b ;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px 0 ;
+    transition: all .5s ease;
+
+}
+.contenedor-form input[type="text"]:focus,
+.contenedor-form input[type="number"]:focus{
+border-bottom: 4px solid #0075d9;
+
+}
+
+/*---------- FOOTER ----------*/
+.contenedor .footer {
+ 
+    grid-area: footer;
+
+    background: white;
+}
+.footer div{
+    margin-top: 20px;
+}
+@media (max-width: 892px)
+{
+	body
+	{
+		font-size: 16px;
+	}
+	
+	.contenedor{
+		grid-template-areas:
+		'header			header   	header'
+		'destacado		destacado 	destacado'
+		'contenido		contenido 	contenido'
+		'aside	 		aside 		aside'
+		'footer	 		footer 		footer';
+	}
+	video{
+		width:500px; 
+		height: 400px;
+	}
+}
+/**********table*********/
+@media (max-width: 682px)
+{
+.articulo.destacado{
+	grid-template-columns: 1fr;
+}
+.articulo.destacado .contenedor-thumbnail {
+	height: 14em;
+}
+
+}
+/********** celular**************/
+@media (max-width: 576px)
+{
+
+	.contenedor {
+		width: 90%;
+		max-width: 75em;
+		margin: 1.25em auto;
+		display: grid;
+		grid-gap: 1.25em;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(5, auto);
+		grid-template-areas:
+			'header'
+			'destacado '
+			'contenido '
+			'aside '
+			'footer	 ';
+    }
+}
